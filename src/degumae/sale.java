@@ -3,7 +3,7 @@ package degumae;
    
 import java.util.Scanner;
 
-public class Sale {
+public class sale {
         
     public void getSale(){
         Scanner input = new Scanner(System.in);
@@ -62,6 +62,6 @@ public class Sale {
     
     
 }
-}
+
     
 
