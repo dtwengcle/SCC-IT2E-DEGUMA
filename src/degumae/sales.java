@@ -1,35 +1,28 @@
 
 package degumae;
 
-import java.util.Scanner;
-
 public class sales {
-    
-    public void getSales(){
-        Scanner input = new Scanner (System.in);
+        String coname, prname;
+        int quant,pcash;
+        double ppri;
         
-        System.out.print("Enter customer name: ");
-        String customer = input.nextLine();
-        System.out.print("product name: ");
-        String product = input.nextLine();
-        System.out.print("quantity: ");
-        int quantity = input.nextInt();
-        System.out.print("price: ");
-        int price = input.nextInt();
-        System.out.print("cash: ");
-        int cash = input.nextInt();
-        
-        
-        System.out.println("\n------------------");
-        System.out.println("RECEIPT");
-        System.out.println("---------------------");
-        
-        System.out.println("Name:"+customer);
-        System.out.println("Product:"+product);
-        System.out.println("Quantity:"+quantity);
-        System.out.println("Total due:"+(quantity*price));
-        System.out.println("Cash:"+(cash));
-        System.out.println("Change:"+(cash-(quantity*price)));
-    }
-    
+        public void addSales(String cosna,String proname, int qty, double pri, int csh, double ttdue, double chnge ){
+            
+            this.coname = cosna;
+            this.prname = proname;
+            this.quant = qty;
+            this.ppri = pri;
+            this.pcash = csh;
+            
+        }  
+            
+        public void viewSales(){
+             double totd = quant * ppri;
+             double change = pcash - totd;
+             
+             System.out.printf("%-10s %-10s %-10d %-10.2f %-10d %-10.2f %-10.2f",
+                     this.coname, this.prname, this.quant, this.ppri, this.pcash, totd, change);
+             System.out.println("");
+         }
+            
 }
